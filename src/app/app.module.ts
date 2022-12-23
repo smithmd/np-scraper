@@ -10,10 +10,12 @@ import {NeptunesPrideService} from "./services/neptunes-pride.service";
 import {MatCardModule} from "@angular/material/card";
 import {MatListModule} from "@angular/material/list";
 import {MatGridListModule} from "@angular/material/grid-list";
+import { MathComponent } from './components/math/math.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MathComponent
   ],
     imports: [
         BrowserModule,

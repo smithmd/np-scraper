@@ -8,11 +8,19 @@
                   (cdkDropListDropped)="drop($event)">
             <mat-list-item cdkDrag [cdkDragData]="player" *ngFor="let player of teams[0].players">
                 <span matListItemTitle>{{player.alias}}</span>
-                <span matListItemLine>Economy: {{player.total_economy}}</span>
-                <span matListItemLine>Industry: {{player.total_industry}}</span>
-                <span matListItemLine>Science: {{player.total_science}}</span>
+                <span matListItemLine class="row">
+                    <span class="col"><strong>Economy</strong>: {{player.total_economy}}</span>
+                    <span class="col"><strong>Industry</strong>: {{player.total_industry}}</span>
+                    <span class="col"><strong>Science</strong>: {{player.total_science}}</span>
+                </span>
+                <span matListItemLine class="row">
+                    <span class="col"><strong>Stars</strong>: {{player.total_stars}}</span>
+                    <span class="col"><strong>Carriers</strong>: {{player.total_fleets}}</span>
+                    <span class="col"><strong>Ships</strong>: {{player.total_strength}}</span>
+                </span>
+                <span matListItemLine></span>
             </mat-list-item>
-            <div>Math</div>
+            <app-math [teamSize]="teams[0].players.length" [players]="teams[0].players"></app-math>
         </mat-list>
         <mat-list class="col"
                   cdkDropList
@@ -22,11 +30,19 @@
                   (cdkDropListDropped)="drop($event)">
             <mat-list-item cdkDrag [cdkDragData]="player" *ngFor="let player of teams[1].players">
                 <span matListItemTitle>{{player.alias}}</span>
-                <span matListItemLine>Economy: {{player.total_economy}}</span>
-                <span matListItemLine>Industry: {{player.total_industry}}</span>
-                <span matListItemLine>Science: {{player.total_science}}</span>
+                <span matListItemLine class="row">
+                    <span class="col"><strong>Economy</strong>: {{player.total_economy}}</span>
+                    <span class="col"><strong>Industry</strong>: {{player.total_industry}}</span>
+                    <span class="col"><strong>Science</strong>: {{player.total_science}}</span>
+                </span>
+                <span matListItemLine class="row">
+                    <span class="col"><strong>Stars</strong>: {{player.total_stars}}</span>
+                    <span class="col"><strong>Carriers</strong>: {{player.total_fleets}}</span>
+                    <span class="col"><strong>Ships</strong>: {{player.total_strength}}</span>
+                </span>
+                <span matListItemLine></span>
             </mat-list-item>
-            <div>Math</div>
+            <app-math [teamSize]="teams[1].players.length" [players]="teams[1].players"></app-math>
         </mat-list>
     </div>
 </div>
