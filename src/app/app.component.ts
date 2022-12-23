@@ -44,4 +44,8 @@ export class AppComponent {
             );
         }
     }
+
+    calculateIncome(player: Player): number {
+        return (player.total_economy * 10) + (player.tech.banking.level * 150);
+    }
 }

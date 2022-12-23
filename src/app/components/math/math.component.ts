@@ -69,4 +69,14 @@ export class MathComponent {
 
         return 0;
     }
+
+    get total_income(): number {
+        if (this.players && this.players.length) {
+            return this.players.reduce((prev: number, current: Player) => {
+                return prev + ((current.total_economy * 10) + (current.tech.banking.level * 150));
+            }, 0);
+        }
+
+        return 0;
+    }
 }
