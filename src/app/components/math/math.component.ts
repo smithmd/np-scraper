@@ -79,4 +79,16 @@ export class MathComponent {
 
         return 0;
     }
+
+
+    get total_ships_per_tick(): string {
+        if (this.players && this.players.length) {
+            return this.players.reduce((prev: number, current: Player) => {
+                return prev + (current.total_industry * (5 + current.tech.manufacturing.level) / 24);
+            }, 0).toFixed(2);
+        }
+
+        return '0';
+    }
+
 }

@@ -48,4 +48,8 @@ export class AppComponent {
     calculateIncome(player: Player): number {
         return (player.total_economy * 10) + (player.tech.banking.level * 150);
     }
+
+    calculateShips(player: Player): string {
+        return (player.total_industry * (5 + player.tech.manufacturing.level) / 24).toFixed(2);
+    }
 }
