@@ -1,8 +1,15 @@
 <mat-card *ngIf="teamSize > 0">
-    <mat-card-header>Math</mat-card-header>
-    <mat-card-content>
-        <p>Economy: {{total_economy}}</p>
-        <p>Industry: {{total_industry}}</p>
-        <p>Science: {{total_science}}</p>
+    <mat-card-header>Totals</mat-card-header>
+    <mat-card-content class="container">
+        <div class="row">
+            <div class="col">Economy: {{total_economy}}</div>
+            <div class="col">Industry: {{total_industry}}</div>
+            <div class="col">Science: {{total_science}}</div>
+        </div>
+        <div class="row">
+            <div class="col">Stars: {{total_stars}}</div>
+            <div class="col">Carriers: {{total_carriers}}</div>
+            <div class="col">Ships: {{total_ships}}</div>
+        </div>
     </mat-card-content>
 </mat-card>

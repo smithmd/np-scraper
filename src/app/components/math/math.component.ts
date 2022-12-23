@@ -39,4 +39,34 @@ export class MathComponent {
 
         return 0;
     }
+
+    get total_stars(): number {
+        if (this.players && this.players.length) {
+            return this.players.reduce((prev: number, current: Player) => {
+                return prev + current.total_stars;
+            }, 0);
+        }
+
+        return 0;
+    }
+
+    get total_ships(): number {
+        if (this.players && this.players.length) {
+            return this.players.reduce((prev: number, current: Player) => {
+                return prev + current.total_strength;
+            }, 0);
+        }
+
+        return 0;
+    }
+
+    get total_carriers(): number {
+        if (this.players && this.players.length) {
+            return this.players.reduce((prev: number, current: Player) => {
+                return prev + current.total_fleets;
+            }, 0);
+        }
+
+        return 0;
+    }
 }
