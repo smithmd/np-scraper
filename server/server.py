@@ -16,6 +16,7 @@ class MyServer(BaseHTTPRequestHandler):
             "api_version": "0.1"
         }
         payload = requests.post(remote_uri, params)
+        print(payload.text)
 
         self.send_response(200)
         self.send_header("Content-type", "application/json")
