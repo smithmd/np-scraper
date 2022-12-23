@@ -11,11 +11,13 @@ import {MatCardModule} from "@angular/material/card";
 import {MatListModule} from "@angular/material/list";
 import {MatGridListModule} from "@angular/material/grid-list";
 import { MathComponent } from './components/math/math.component';
+import { PlayerComponent } from './components/player/player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MathComponent
+    MathComponent,
+    PlayerComponent
   ],
     imports: [
         BrowserModule,

@@ -1,0 +1,17 @@
+<mat-list-item cdkDrag [cdkDragData]="player" *ngFor="let player of team.players">
+    <span matListItemTitle>{{player.alias}}</span>
+        <span matListItemLine class="row">
+        <span class="col"><strong>Economy</strong>: {{player.total_economy}}</span>
+        <span class="col"><strong>Industry</strong>: {{player.total_industry}}</span>
+        <span class="col"><strong>Science</strong>: {{player.total_science}}</span>
+    </span>
+        <span matListItemLine class="row">
+        <span class="col"><strong>Stars</strong>: {{player.total_stars}}</span>
+        <span class="col"><strong>Carriers</strong>: {{player.total_fleets}}</span>
+        <span class="col"><strong>Ships</strong>: {{player.total_strength}}</span>
+    </span>
+        <span matListItemLine class="row">
+        <span class="col"><strong>Income</strong>: {{calculateIncome(player)}}</span>
+        <span class="col"><strong>Ships/tick</strong>: {{calculateShips(player)}}</span>
+    </span>
+</mat-list-item>
